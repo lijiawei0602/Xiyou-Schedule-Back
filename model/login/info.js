@@ -83,34 +83,34 @@ var getStuSchedule = function(session,semester,callback){
 				for(var i=0;i<array.length;i++){
 					var p = array[i];
 					switch(p["WEEKNUM"]){
-						case 1: if(p["JT_NO"] == "1-2"){var data = {weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["1-2"] = data}
-								if(p["JT_NO"] == "3-4"){var data = {weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["3-4"] = data}
-								if(p["JT_NO"] == "5-6"){var data = {weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["5-6"] = data}
-								if(p["JT_NO"] == "7-8"){var data = {weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["7-8"] = data}
+						case 1: if(p["JT_NO"] == "1-2"){var data = {teacher:p["Teach_Name"],weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["1-2"] = data}
+								if(p["JT_NO"] == "3-4"){var data = {teacher:p["Teach_Name"],weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["3-4"] = data}
+								if(p["JT_NO"] == "5-6"){var data = {teacher:p["Teach_Name"],weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["5-6"] = data}
+								if(p["JT_NO"] == "7-8"){var data = {teacher:p["Teach_Name"],weekNum:"1",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[0]["7-8"] = data}
 								
 								break;
-						case 2: if(p["JT_NO"] == "1-2"){var data = {weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["1-2"] = data}
-								if(p["JT_NO"] == "3-4"){var data = {weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["3-4"] = data}
-								if(p["JT_NO"] == "5-6"){var data = {weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["5-6"] = data}
-								if(p["JT_NO"] == "7-8"){var data = {weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["7-8"] = data}
+						case 2: if(p["JT_NO"] == "1-2"){var data = {teacher:p["Teach_Name"],weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["1-2"] = data}
+								if(p["JT_NO"] == "3-4"){var data = {teacher:p["Teach_Name"],weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["3-4"] = data}
+								if(p["JT_NO"] == "5-6"){var data = {teacher:p["Teach_Name"],weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["5-6"] = data}
+								if(p["JT_NO"] == "7-8"){var data = {teacher:p["Teach_Name"],weekNum:"2",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[1]["7-8"] = data}
 								
 								break;
-						case 3: if(p["JT_NO"] == "1-2"){var data = {weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["1-2"] = data}
-								if(p["JT_NO"] == "3-4"){var data = {weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["3-4"] = data}
-								if(p["JT_NO"] == "5-6"){var data = {weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["5-6"] = data}
-								if(p["JT_NO"] == "7-8"){var data = {weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["7-8"] = data}
+						case 3: if(p["JT_NO"] == "1-2"){var data = {teacher:p["Teach_Name"],weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["1-2"] = data}
+								if(p["JT_NO"] == "3-4"){var data = {teacher:p["Teach_Name"],weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["3-4"] = data}
+								if(p["JT_NO"] == "5-6"){var data = {teacher:p["Teach_Name"],weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["5-6"] = data}
+								if(p["JT_NO"] == "7-8"){var data = {teacher:p["Teach_Name"],weekNum:"3",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[2]["7-8"] = data}
 								
 								break;
-						case 4: if(p["JT_NO"] == "1-2"){var data = {weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["1-2"] = data}
-								if(p["JT_NO"] == "3-4"){var data = {weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["3-4"] = data}
-								if(p["JT_NO"] == "5-6"){var data = {weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["5-6"] = data}
-								if(p["JT_NO"] == "7-8"){var data = {weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["7-8"] = data}
+						case 4: if(p["JT_NO"] == "1-2"){var data = {teacher:p["Teach_Name"],weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["1-2"] = data}
+								if(p["JT_NO"] == "3-4"){var data = {teacher:p["Teach_Name"],weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["3-4"] = data}
+								if(p["JT_NO"] == "5-6"){var data = {teacher:p["Teach_Name"],weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["5-6"] = data}
+								if(p["JT_NO"] == "7-8"){var data = {teacher:p["Teach_Name"],weekNum:"4",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[3]["7-8"] = data}
 								
 								break;
-						case 5: if(p["JT_NO"] == "1-2"){var data = {weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["1-2"] = data}
-								if(p["JT_NO"] == "3-4"){var data = {weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["3-4"] = data}
-								if(p["JT_NO"] == "5-6"){var data = {weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["5-6"] = data}
-								if(p["JT_NO"] == "7-8"){var data = {weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["7-8"] = data}
+						case 5: if(p["JT_NO"] == "1-2"){var data = {teacher:p["Teach_Name"],weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["1-2"] = data}
+								if(p["JT_NO"] == "3-4"){var data = {teacher:p["Teach_Name"],weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["3-4"] = data}
+								if(p["JT_NO"] == "5-6"){var data = {teacher:p["Teach_Name"],weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["5-6"] = data}
+								if(p["JT_NO"] == "7-8"){var data = {teacher:p["Teach_Name"],weekNum:"5",scheduleName:p["S_Name"],classRoom:p["RoomNum"]}; arr[4]["7-8"] = data}
 								
 								break;
 						default:

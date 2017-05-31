@@ -14,7 +14,7 @@ var attend = require("./model/login/attend.js");
 var json = function(err,res,result){
 	if(err){
 		res.jsonp({
-			err:true,
+			error:true,
 			result:result
 		});
 	}else{

@@ -43,20 +43,23 @@ function login(userid,password,session,verCode,callback){
 	},
 	function(err,res,body){
 		if(err){
-			callback("Server Error",err);
+			callback(true,err);
 			return;
 		}
 
     	var json = JSON.parse(body);
-    	var cookie,className,name;
+    	console.log(json);
+    	var cookie,className,name,flag=0,t=0;
     	for(var key in json){
     		if(key == "IsSucceed" && json[key] === true){
     			var setCookie = res.headers["set-cookie"][0];
     			var index = setCookie.indexOf(";");
     			cookie = setCookie.substr(0 , index);
+    			flag = 1;
     		}
-    		if(key == "Obj"){
+ 			if(key == "Obj" && flag === 1){
     			var j = json[key];
+    			t=1;
     			for(var k in j){
     				if(k == "BJ"){
     					className=j[k];
@@ -67,13 +70,16 @@ function login(userid,password,session,verCode,callback){
     			}
     		}
     	}
-
-    	var obj = {
-    		class:className,
-    		name:name,
-    		cookie:cookie
-    	};
-    	callback(false,obj);
+    	if(t === 1){
+    		var obj = {
+			    class:className,
+			    name:name,
+			    cookie:cookie
+			};
+			callback(false,obj);
+    	}else{
+    		callback(true,json["Msg"]);
+    	}
 	})
 }
 
